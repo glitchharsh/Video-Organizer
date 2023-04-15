@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Video API</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <input type="text" name="logsarchives" id="logsarchives" autocomplete="off"  placeholder="Press Enter" onkeydown="redirect(this)" style="margin-top:50px;width: 50vw; padding:8px 2px; border-radius:3px;">
+    </div>
+</body>
+<script>
+    function redirect(ele) {
+        if(event.key === 'Enter') {
+            if(ele.value === '')
+                alert("Enter the text and press enter");
+            else
+                window.location.href = `http://localhost:8000/?q=`+ele.value;
+        }
+    }
+</script>
+</html>
